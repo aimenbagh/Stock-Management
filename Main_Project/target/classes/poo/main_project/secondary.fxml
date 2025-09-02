@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="Mainpane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.85" prefWidth="950.0" style="-fx-background-color: #F0F0F0; -fx-background-radius: 20; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo.main_project.SecondaryController">
+    <children>
+        <AnchorPane fx:id="myscene" layoutX="54.0" layoutY="88.85000000000002" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="897.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="-1.0" />
+        <HBox alignment="CENTER_LEFT" layoutY="53.0" prefHeight="36.8" prefWidth="950.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0">
+            <children>
+                <FontIcon fx:id="navigation_icon" wrappingWidth="23.0" />
+                <Label fx:id="navigation_label" prefHeight="37.0" prefWidth="188.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </Label>
+            </children>
+            <padding>
+                <Insets left="218.9" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="950.0" style="-fx-background-color: white; -fx-background-radius: 0 20 0 0; -fx-border-radius: 0 20 0 0;">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="96.0" radius="28.75">
+                    <color>
+                        <Color red="0.8392156958580017" green="0.8392156958580017" blue="0.8392156958580017" opacity="0.5" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <children>
+                <AnchorPane fx:id="search_bar">
+                    <children>
+                        <MFXTextField fx:id="s" layoutX="7.0" layoutY="11.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="220.0" promptText="Rechercher" style="-fx-background-color: #F0F0F0; -fx-border-color: transparent; -fx-border-radius: 25; -fx-background-radius: 25;">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="7.0" left="40.0" top="7.0" />
+                            </padding>
+                        </MFXTextField>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="fas-search" iconSize="16" layoutX="22.0" layoutY="33.0" />
+                    </children>
+                </AnchorPane>
+                <Pane prefHeight="53.0" prefWidth="515.0" style="-fx-background-color: white; -fx-background-radius: 0 20 0 0; -fx-border-radius: 0 20 0 0;">
+                    <children>
+                        <Button fx:id="mainexit" layoutX="467.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exitwindow" onMouseEntered="#mainbutteffectin" onMouseExited="#mainbutteffectout" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fx:id="mainexiticon" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/exit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="mainminiize" layoutX="435.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minimizewindow" onMouseEntered="#mainbutteffectin" onMouseExited="#mainbutteffectout" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fx:id="mainminiizeicon" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/minimize.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+            <padding>
+                <Insets left="208.0" />
+            </padding>
+        </HBox>
+        <VBox fx:id="pane1" layoutX="53.0" layoutY="53.0" prefHeight="623.0" prefWidth="135.0" style="-fx-background-color: white; -fx-background-radius: 0 0 0 20; -fx-border-radius: 0 0 0 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0">
+            <children>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawOut" prefHeight="37.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Accueil" textFill="#aaaaaa">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="menu" />
+                    </toggleGroup>
+                </ToggleButton>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Approvisionnement" textFill="#aaaaaa" toggleGroup="$menu">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Vente" textFill="#aaaaaa" toggleGroup="$menu">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Inventaire" textFill="#aaaaaa" toggleGroup="$menu">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawOut" prefHeight="42.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Client" textFill="#aaaaaa" toggleGroup="$menu">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawOut" prefHeight="42.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Fournisseur" textFill="#aaaaaa" toggleGroup="$menu">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="135.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Journal" textFill="#aaaaaa" toggleGroup="$menu">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ToggleButton>
+            </children>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="25.4" radius="30.15" width="97.2">
+                    <color>
+                        <Color red="0.8299999833106995" green="0.8299999833106995" blue="0.8299999833106995" opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </VBox>
+        <VBox layoutY="53.0" prefHeight="623.0" prefWidth="53.0" style="-fx-background-color: white; -fx-background-radius: 0 0 0 20; -fx-border-radius: 0 0 0 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="myimage" fitHeight="53.0" fitWidth="53.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@img/inv%20icon.png" />
+                    </image>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="-10.0" radius="23.8025" width="97.21">
+                            <color>
+                                <Color red="0.8392156958580017" green="0.8392156958580017" blue="0.8392156958580017" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ImageView>
+                <ToggleButton fx:id="AccueuilButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawOut" prefHeight="37.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Accueil" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-home-outline" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Accueil" />
+                    </tooltip>
+                </ToggleButton>
+                <ToggleButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Approvisionnement" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-cart-plus" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Approvisionnement" />
+                    </tooltip>
+                </ToggleButton>
+                <ToggleButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Vente" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-cart-outline" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Vente" />
+                    </tooltip>
+                </ToggleButton>
+                <ToggleButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Inventaire" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-package-variant-closed" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Inventaire" />
+                    </tooltip>
+                </ToggleButton>
+                <ToggleButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawOut" prefHeight="42.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Client" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-account-multiple" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Client" />
+                    </tooltip>
+                </ToggleButton>
+                <ToggleButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawOut" prefHeight="42.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Fournisseur" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-store" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Fournisseur" />
+                    </tooltip>
+                </ToggleButton>
+                <ToggleButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#drawIn" prefHeight="42.0" prefWidth="53.0" styleClass="mfx-rectangle-toggle-node" stylesheets="@css/MFXRectangleToggleNode.css" text="Journal" textFill="#aaaaaa" toggleGroup="$menu">
+                    <graphic>
+                        <FontIcon iconColor="#aaaaaa" iconLiteral="mdi-clipboard-outline" iconSize="20" />
+                    </graphic>
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <tooltip>
+                        <Tooltip text="Journal" />
+                    </tooltip>
+                </ToggleButton>
+            </children>
+        </VBox>
+        <Label fx:id="logolabel" alignment="TOP_LEFT" graphicTextGap="2.0" prefHeight="53.0" prefWidth="188.0" style="-fx-background-color: white; -fx-line-spacing: 0; -fx-background-radius: 20 0 0 0; -fx-background-radius: 20 0 0 0;" text="Gestion" textFill="#1a568d" AnchorPane.bottomAnchor="623.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="762.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Poppins ExtraBold" size="16.0" />
+            </font>
+            <padding>
+                <Insets left="10.0" top="5.0" />
+            </padding>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="-10.0" radius="23.8025" width="97.21">
+                    <color>
+                        <Color red="0.8392156958580017" green="0.8392156958580017" blue="0.8392156958580017" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+    </children>
+</AnchorPane>

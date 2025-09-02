@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="735.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo.main_project.PrimaryController">
+   <left>
+      <AnchorPane prefHeight="220.0" prefWidth="367.5" style="-fx-background-radius: 55 0 0 55; -fx-border-radius: 55 0 0 55;" styleClass="gradientbackground" stylesheets="@css/logingrad.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="277.0" fitWidth="289.0" layoutX="49.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/image_12.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="59.0" layoutY="18.0" prefHeight="55.0" prefWidth="157.0" text="Gestion" textFill="WHITE">
+               <font>
+                  <Font name="Poppins ExtraBold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="66.0" prefHeight="55.0" prefWidth="284.0" text="De Stock" textFill="WHITE">
+               <font>
+                  <Font name="Poppins ExtraBold" size="38.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="220.0" prefWidth="367.5" style="-fx-background-color: white; -fx-background-radius: 0 55 55 0; -fx-border-radius: 0 55 55 0;" BorderPane.alignment="CENTER">
+         <children>
+            <MFXTextField id="userncss" fx:id="username" layoutX="56.0" layoutY="147.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="238.0" promptText="Nom d'utilisateur" style="-fx-background-color: #ECECEC; -fx-border-color: transparent; -fx-background-radius: 26; -fx-border-radius: 26; -fx-border-width: 1.5 1.5 1.5 1.5;">
+               <padding>
+                  <Insets bottom="12.0" left="54.0" top="12.0" />
+               </padding>
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <textFill>
+                  <Color red="0.20392157137393951" green="0.3529411852359772" blue="0.45490196347236633" opacity="0.8700000047683716" />
+               </textFill>
+            </MFXTextField>
+            <MFXPasswordField fx:id="password" layoutX="56.0" layoutY="195.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="238.0" promptText="Mot de passe" style="-fx-background-color: #ECECEC; -fx-border-color: transparent; -fx-background-radius: 26; -fx-border-radius: 26; -fx-border-width: 1.5 1.5 1.5 1.5;">
+               <padding>
+                  <Insets bottom="12.0" left="54.0" right="10.0" top="12.0" />
+               </padding>
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <textFill>
+                  <Color red="0.20392157137393951" green="0.3529411852359772" blue="0.45490196347236633" opacity="0.8700000047683716" />
+               </textFill>
+            </MFXPasswordField>
+            <MFXButton fx:id="loginbutt" layoutX="56.0" layoutY="265.0" onAction="#switchToSecondary" onKeyPressed="#switchToSecondary" onMouseEntered="#butteffectin" onMouseExited="#butteffectout" onMousePressed="#butteffectout" onMouseReleased="#butteffectin" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: #1A568D; -fx-background-radius: 20; -fx-border-color: transparent; -fx-border-radius: 20;" text="S'IDENTIFIER" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Black" size="14.0" />
+               </font>
+            </MFXButton>
+            <Label fx:id="message" alignment="CENTER" layoutX="26.0" layoutY="43.0" prefHeight="105.0" prefWidth="298.0" style="-fx-background-color: white;" text="Bienvenue" textFill="#1a568d">
+               <font>
+                  <Font name="Poppins ExtraBold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="19.0" fitWidth="17.0" layoutX="83.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/lock-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="19.0" layoutX="83.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/id-icon.png" />
+               </image>
+            </ImageView>
+            <MFXButton fx:id="exitButt" contentDisplay="CENTER" layoutX="319.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#exitwindow" onMouseEntered="#butteffectin" onMouseExited="#butteffectout" prefHeight="24.0" prefWidth="23.0" rippleAnimateBackground="false" rippleBackgroundOpacity="1.0" rippleColor="WHITE" rippleRadius="80.0" text=" ">
+               <graphic>
+                  <ImageView fx:id="exiticon" fitHeight="24.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@img/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+            <Hyperlink layoutX="84.0" layoutY="326.0" lineSpacing="1.0" prefHeight="48.0" prefWidth="178.0" text="Mot de passe/Identificateur oublié ?" textAlignment="CENTER" textFill="#5c7a8e" wrapText="true">
+               <tooltip>
+                  <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" text="You have to free yourself from the post modern neo-marxsite ethos to regain your full cognitive abilities" textAlignment="CENTER">
+                     <font>
+                        <Font name="Poppins Light" size="10.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <font>
+                  <Font name="Poppins Medium" size="12.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
